@@ -5,6 +5,8 @@ import { Container } from './styles'
 export function TransactionsGrid() {
     const { transactions } = useContext(TransactionsContext)
 
+    console.log(transactions)
+
     return (
         <Container>
             <table>
