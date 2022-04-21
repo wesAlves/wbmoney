@@ -3,7 +3,7 @@ import { Header } from "./components/Headers";
 import { GlogalStyles } from "./styles/global"
 import {createServer} from 'miragejs'
 import { useState } from "react";
-import Modal from 'react-modal'
+import { NewTransactionModal } from "./components/NewTransactionModal";
 
 createServer({
   routes(){
@@ -24,28 +24,27 @@ createServer({
   }
 })
 
-Modal.setAppElement('#root')
 
 export function App() {
 
-const [isNewTransactionModalOpen, setIsNewTransactionModalOpen] = useState(false)
-
+    const [isNewTransactionModalOpen, setIsNewTransactionModalOpen] = useState(false)
+    
     function handleOpenNewTransactionModal(){
-        setIsNewTransactionModalOpen(true)
+      setIsNewTransactionModalOpen(true)
     }
     
     function handleCloseNewTransactionModal(){
         setIsNewTransactionModalOpen(false)
     }
 
+
   return (
     <>
     <Header onOpenNewTransactionModal={handleOpenNewTransactionModal}/>
     <Dashboard />
+    <NewTransactionModal isOpen={isNewTransactionModalOpen} onResquestClose={handleCloseNewTransactionModal}/>
 
-    <Modal isOpen={isNewTransactionModalOpen} onRequestClose={handleCloseNewTransactionModal}>
-Cadastra
-          </Modal>
+  
       <GlogalStyles />
     </>
   );
