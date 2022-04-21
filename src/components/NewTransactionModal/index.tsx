@@ -4,7 +4,8 @@ import { Container, TransactionTypeContainer, RadioBox } from './styles'
 import closeImg from '../../assets/close.svg'
 import income from '../../assets/income.svg'
 import outcome from '../../assets/outcome.svg'
-import { useState } from 'react'
+import { FormEvent, useState } from 'react'
+import { api } from '../../services/api'
 
 interface NewTransactionModalProps {
     isOpen: boolean
@@ -18,6 +19,22 @@ export function NewTransactionModal({
     onResquestClose,
 }: NewTransactionModalProps) {
     const [type, setType] = useState('deposit')
+
+    const [title, setTitle] = useState('')
+    const [price, setPrice] = useState(0)
+    const [category, setCategory] = useState('')
+
+    function handleSubmitNewTransaction(event: FormEvent) {
+        event.preventDefault()
+        const data = {
+            title,
+            price,
+            category,
+            type,
+        }
+
+        api.post('/transactions', data)
+    }
 
     return (
         <Modal
@@ -33,12 +50,21 @@ export function NewTransactionModal({
             >
                 <img src={closeImg} alt="close" />
             </button>
-            <Container>
+            <Container onSubmit={handleSubmitNewTransaction}>
                 <h2>Add new transaction</h2>
 
-                <input placeholder="Title" />
+                <input
+                    placeholder="Title"
+                    value={title}
+                    onChange={(event) => setTitle(event.target.value)}
+                />
 
-                <input type="number" placeholder="price" />
+                <input
+                    type="number"
+                    placeholder="price"
+                    value={price}
+                    onChange={(event) => setPrice(Number(event.target.value))}
+                />
 
                 <TransactionTypeContainer>
                     <RadioBox
@@ -62,7 +88,11 @@ export function NewTransactionModal({
                     </RadioBox>
                 </TransactionTypeContainer>
 
-                <input placeholder="category" />
+                <input
+                    placeholder="category"
+                    value={category}
+                    onChange={(event) => setCategory(event.target.value)}
+                />
 
                 <button type="submit">Create</button>
             </Container>
