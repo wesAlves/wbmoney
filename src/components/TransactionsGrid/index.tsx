@@ -6,7 +6,7 @@ export function TransactionsGrid() {
 
     console.log(transactions)
 
-    if (transactions.length <= 0 && transactions === undefined) {
+    if (transactions === undefined) {
         return <>none</>
     } else {
         return (

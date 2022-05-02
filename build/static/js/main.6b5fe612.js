@@ -1,4 +1,4 @@
-/*! For license information please see main.39a51b5f.js.LICENSE.txt */
+/*! For license information please see main.6b5fe612.js.LICENSE.txt */
 !(function () {
     var e = {
             7757: function (e, t, n) {
@@ -16750,7 +16750,7 @@
             }
             function ot() {
                 var e = rt().transactions
-                if ((console.log(e), e.length <= 0 && void 0 === e))
+                if ((console.log(e), void 0 === e))
                     return (0, et.jsx)(et.Fragment, { children: 'None' })
                 var t = e.reduce(
                     function (e, t) {
@@ -16846,7 +16846,7 @@
                 var e = rt().transactions
                 return (
                     console.log(e),
-                    e.length <= 0 && void 0 === e
+                    void 0 === e
                         ? (0, et.jsx)(et.Fragment, { children: 'none' })
                         : (0, et.jsx)(it, {
                               children: (0, et.jsxs)('table', {
@@ -17844,4 +17844,4 @@
                     )
         })()
 })()
-//# sourceMappingURL=main.39a51b5f.js.map
+//# sourceMappingURL=main.6b5fe612.js.map

@@ -10,7 +10,7 @@ export function Summary() {
 
     console.log(transactions)
 
-    if (transactions.length <= 0 && transactions === undefined) {
+    if (transactions === undefined) {
         return <>None</>
     } else {
         const totalDeposits = transactions.reduce(
