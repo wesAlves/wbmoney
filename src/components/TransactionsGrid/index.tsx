@@ -4,7 +4,9 @@ import { Container } from './styles'
 export function TransactionsGrid() {
     const { transactions } = useTransactions()
 
-    if (transactions.length > -1) {
+    if (transactions.length <= 0) {
+        return <>none</>
+    } else {
         return (
             <Container>
                 <table>
@@ -39,7 +41,5 @@ export function TransactionsGrid() {
                 </table>
             </Container>
         )
-    } else {
-        return <>none</>
     }
 }

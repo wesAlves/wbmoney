@@ -1,4 +1,4 @@
-/*! For license information please see main.ca8dcc72.js.LICENSE.txt */
+/*! For license information please see main.a514f9a4.js.LICENSE.txt */
 !(function () {
     var e = {
             7757: function (e, t, n) {
@@ -16771,7 +16771,7 @@
             }
             function ot() {
                 var e = rt().transactions
-                if (e.length < 0)
+                if (e.length <= 0)
                     return (0, et.jsx)(et.Fragment, { children: 'None' })
                 var t = e.reduce(
                     function (e, t) {
@@ -16865,8 +16865,9 @@
                 )
             function lt() {
                 var e = rt().transactions
-                return e.length > -1
-                    ? (0, et.jsx)(it, {
+                return e.length <= 0
+                    ? (0, et.jsx)(et.Fragment, { children: 'none' })
+                    : (0, et.jsx)(it, {
                           children: (0, et.jsxs)('table', {
                               children: [
                                   (0, et.jsx)('thead', {
@@ -16896,7 +16897,6 @@
                               ],
                           }),
                       })
-                    : (0, et.jsx)(et.Fragment, { children: 'none' })
             }
             var ut = Me.main(
                 at ||
@@ -17862,4 +17862,4 @@
                     )
         })()
 })()
-//# sourceMappingURL=main.ca8dcc72.js.map
+//# sourceMappingURL=main.a514f9a4.js.map
