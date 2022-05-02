@@ -1,12 +1,12 @@
 {
     "files": {
-        "main.js": "/static/js/main.bad1c0d6.js",
+        "main.js": "/static/js/main.1ac1820e.js",
         "wbmoney/build/static/media/logo.svg": "/static/media/logo.614d71d1db9fdf3ca2355f05ed3b0142.svg",
         "index.html": "/index.html",
         "wbmoney/build/static/media/outcome.svg": "/static/media/outcome.6eb96d3079777422e5bd5deaa688a46e.svg",
         "wbmoney/build/static/media/income.svg": "/static/media/income.d58effe2f7ca5d17f64c8350e5fa2fe2.svg",
         "wbmoney/build/static/media/close.svg": "/static/media/close.f62862c6571367515ce17c7b4e77a1fc.svg",
-        "main.bad1c0d6.js.map": "/static/js/main.bad1c0d6.js.map"
+        "main.1ac1820e.js.map": "/static/js/main.1ac1820e.js.map"
     },
-    "entrypoints": ["static/js/main.bad1c0d6.js"]
+    "entrypoints": ["static/js/main.1ac1820e.js"]
 }

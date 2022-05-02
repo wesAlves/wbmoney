@@ -8,6 +8,8 @@ import { useTransactions } from '../../hooks/useTransactions'
 export function Summary() {
     const { transactions } = useTransactions()
 
+    console.log(transactions)
+
     if (transactions.length <= 0) {
         return <>None</>
     } else {

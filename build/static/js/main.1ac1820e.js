@@ -1,4 +1,4 @@
-/*! For license information please see main.bad1c0d6.js.LICENSE.txt */
+/*! For license information please see main.1ac1820e.js.LICENSE.txt */
 !(function () {
     var e = {
             7757: function (e, t, n) {
@@ -14390,14 +14390,22 @@
                 return (0, e.useContext)(g)
             }
             function w() {
-                return b().transactions.length <= 0
-                    ? (0, v.jsx)(v.Fragment, { children: 'None' })
-                    : (0, v.jsx)(v.Fragment, { children: 'Jaca' })
+                var e = b().transactions
+                return (
+                    console.log(e),
+                    e.length <= 0
+                        ? (0, v.jsx)(v.Fragment, { children: 'None' })
+                        : (0, v.jsx)(v.Fragment, { children: 'Jaca' })
+                )
             }
             function S() {
-                return b().transactions.length <= 0
-                    ? (0, v.jsx)(v.Fragment, { children: 'none' })
-                    : (0, v.jsx)(v.Fragment, { children: 'None' })
+                var e = b().transactions
+                return (
+                    console.log(e),
+                    e.length <= 0
+                        ? (0, v.jsx)(v.Fragment, { children: 'none' })
+                        : (0, v.jsx)(v.Fragment, { children: 'None' })
+                )
             }
             function k(e, t) {
                 return (
@@ -17733,4 +17741,4 @@
                     )
         })()
 })()
-//# sourceMappingURL=main.bad1c0d6.js.map
+//# sourceMappingURL=main.1ac1820e.js.map

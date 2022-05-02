@@ -4,6 +4,8 @@ import { Container } from './styles'
 export function TransactionsGrid() {
     const { transactions } = useTransactions()
 
+    console.log(transactions)
+
     if (transactions.length <= 0) {
         return <>none</>
     } else {
