@@ -35,13 +35,13 @@ export function TrasactionsProvider({ children }: TransacitonPrividerProps) {
     const [transactions, setTransactions] = useState<Transaction[]>([])
 
     useEffect(() => {
-        api.get('').then((response) =>
+        api.get('/').then((response) =>
             setTransactions(response.data.transactions)
         )
     }, [])
 
     async function CreateTransaction(transactionInput: CreateTransaction) {
-        const response = await api.post('/transactions', {
+        const response = await api.post('/', {
             ...transactionInput,
             createdAt: new Date(),
         })
