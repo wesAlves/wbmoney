@@ -8,7 +8,7 @@ import { useTransactions } from '../../hooks/useTransactions'
 export function Summary() {
     const { transactions } = useTransactions()
 
-    if (!transactions) {
+    if (transactions.length < 0) {
         return <>None</>
     } else {
         const totalDeposits = transactions.reduce(
