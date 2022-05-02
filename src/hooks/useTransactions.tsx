@@ -35,7 +35,7 @@ export function TrasactionsProvider({ children }: TransacitonPrividerProps) {
     const [transactions, setTransactions] = useState<Transaction[]>([])
 
     useEffect(() => {
-        api.get('transactions').then((response) =>
+        api.get('').then((response) =>
             setTransactions(response.data.transactions)
         )
     }, [])
