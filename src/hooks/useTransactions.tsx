@@ -34,13 +34,16 @@ const TransactionsContext = createContext<TransactionsContextData>(
 export function TrasactionsProvider({ children }: TransacitonPrividerProps) {
     const [transactions, setTransactions] = useState<Transaction[]>([])
 
-    async function GetTransactions() {
-        const response = await api.get('/')
-        setTransactions(response.data)
-        return response.data
-    }
+    useEffect(() => {
+        async function GetTransactions() {
+            const response = await api.get('/')
+            setTransactions(response.data)
+        }
 
-    GetTransactions()
+        GetTransactions().catch(console.error)
+    }, [])
+
+    // GetTransactions()
     // useEffect(() => {
     //     api.get('/').then((response) =>
     //         setTransactions(response.data.transactions)
