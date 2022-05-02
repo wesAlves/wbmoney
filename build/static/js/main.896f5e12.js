@@ -1,4 +1,4 @@
-/*! For license information please see main.750041f7.js.LICENSE.txt */
+/*! For license information please see main.896f5e12.js.LICENSE.txt */
 !(function () {
     var e = {
             7757: function (e, t, n) {
@@ -16696,29 +16696,6 @@
                     i = r[1]
                 function l() {
                     return (l = Qe(
-                        Xe().mark(function e() {
-                            var t
-                            return Xe().wrap(function (e) {
-                                for (;;)
-                                    switch ((e.prev = e.next)) {
-                                        case 0:
-                                            return (e.next = 2), Ze.get('/')
-                                        case 2:
-                                            return (
-                                                (t = e.sent),
-                                                i(t.data),
-                                                e.abrupt('return', t.data)
-                                            )
-                                        case 5:
-                                        case 'end':
-                                            return e.stop()
-                                    }
-                            }, e)
-                        })
-                    )).apply(this, arguments)
-                }
-                function u() {
-                    return (u = Qe(
                         Xe().mark(function e(t) {
                             var n, r
                             return Xe().wrap(function (e) {
@@ -16752,14 +16729,16 @@
                     )).apply(this, arguments)
                 }
                 return (
-                    (function () {
-                        l.apply(this, arguments)
-                    })(),
+                    (0, e.useEffect)(function () {
+                        Ze.get('/').then(function (e) {
+                            return i(e.data.transactions)
+                        })
+                    }, []),
                     (0, et.jsx)(tt.Provider, {
                         value: {
                             transactions: o,
                             CreateTransaction: function (e) {
-                                return u.apply(this, arguments)
+                                return l.apply(this, arguments)
                             },
                         },
                         children: n,
@@ -17865,4 +17844,4 @@
                     )
         })()
 })()
-//# sourceMappingURL=main.750041f7.js.map
+//# sourceMappingURL=main.896f5e12.js.map
