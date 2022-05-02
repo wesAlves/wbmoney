@@ -8,6 +8,9 @@ import { useTransactions } from '../../hooks/useTransactions'
 export function Summary() {
     const { transactions } = useTransactions()
 
+    if (!transactions) {
+        return <>None</>
+    }
     const totalDeposits = transactions.reduce(
         (acc, transaction) => {
             if (transaction.type === 'deposit') {
