@@ -4,7 +4,7 @@ import { Container } from './styles'
 export function TransactionsGrid() {
     const { transactions } = useTransactions()
 
-    console.log(transactions)
+    // console.log(transactions)
 
     return (
         <Container>
