@@ -10,7 +10,8 @@
 
 # production
 #/build
-asset-manifest.json
+build/asset-manifest.json
+# build/index.html
 
 # misc
 .DS_Store
